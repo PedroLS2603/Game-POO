@@ -1,0 +1,7 @@
+C:\Users\BK_St\Desktop\projetos\Game-POO\Jogo - POO\bin\Debug\Jogo - POO.exe.config
+C:\Users\BK_St\Desktop\projetos\Game-POO\Jogo - POO\bin\Debug\Jogo - POO.exe
+C:\Users\BK_St\Desktop\projetos\Game-POO\Jogo - POO\bin\Debug\Jogo - POO.pdb
+C:\Users\BK_St\Desktop\projetos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.csproj.AssemblyReference.cache
+C:\Users\BK_St\Desktop\projetos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.csproj.CoreCompileInputs.cache
+C:\Users\BK_St\Desktop\projetos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.exe
+C:\Users\BK_St\Desktop\projetos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.pdb

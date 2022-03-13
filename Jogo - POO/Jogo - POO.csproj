@@ -43,8 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aranha.cs" />
+    <Compile Include="Arma.cs" />
+    <Compile Include="Arqueiro.cs" />
+    <Compile Include="Dragao.cs" />
+    <Compile Include="Equipamento.cs" />
+    <Compile Include="Goblin.cs" />
+    <Compile Include="Guerreiro.cs" />
+    <Compile Include="Heroi.cs" />
+    <Compile Include="Mago.cs" />
+    <Compile Include="Monstro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="RpgUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
