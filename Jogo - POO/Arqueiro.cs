@@ -20,7 +20,13 @@ namespace Jogo___POO
         {
             
         }
-        private double atacar()
+
+        public override void atacar(Monstro monstro)
+        {
+            monstro.RecebeDano(this.gerarDano(), this.getStatus().getForca());
+        }
+
+        private double gerarDano()
         {
             double forca = this.getStatus().getForca();
             double sorte = this.getStatus().getSorte();
@@ -28,7 +34,7 @@ namespace Jogo___POO
 
             this.flechas -= 1;
 
-            return (forca + agilidade) * (1 + random.Next(0, (int)sorte) / 100);
+            return (forca + agilidade) * (1 + random.Next(0, (int)sorte));
         }
 
         public void setFlechas(int flechas)

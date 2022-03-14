@@ -17,14 +17,13 @@ namespace Jogo___POO
 
         public Guerreiro(String nome, int idade) : base(nome, idade)
         {
-            this.getStatus().setForca(9);
             double buffVida = this.getStatus().getVidaMax() * 1.1;
             this.getStatus().setVidaMax(buffVida);
         }
 
         public override void atacar(Monstro monstro)
         {
-            monstro.RecebeDano(this.gerarDano());
+            monstro.RecebeDano(this.gerarDano(), this.getStatus().getForca());
         }
 
 
@@ -34,8 +33,22 @@ namespace Jogo___POO
             double forca = this.getStatus().getForca();
             double sorte = this.getStatus().getSorte();
             double agilidade = this.getStatus().getAgilidade();
+            Arma[] equipMao = this.getMao();
+            Arma maoDireita = equipMao[0];
+            Arma maoEsquerda = equipMao[0];
 
-            return (forca + agilidade) * (1 + random.Next(0, (int)sorte) / 100);
+
+
+            if(maoDireita.getClasse() != "" || maoEsquerda.getClasse() != "")
+            {
+               return ((forca + agilidade) * (equipMao[0].getPeso() * 0.2)) * (1 + random.Next(0, (int)sorte));
+
+            }
+
+            else
+            {
+                return (forca + agilidade) * (1 + random.Next(0, (int)sorte));
+            }
         }
     }
 }

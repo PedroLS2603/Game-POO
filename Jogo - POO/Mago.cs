@@ -20,7 +20,12 @@ namespace Jogo___POO
         {
         }
 
-        private double atacar()
+        public override void atacar(Monstro monstro)
+        {
+            monstro.RecebeDano(this.gerarDano(), this.getStatus().getInteligencia());
+        }
+
+        private double gerarDano()
         {
             double inteligencia = this.getStatus().getInteligencia();
             double sorte = this.getStatus().getSorte();
@@ -29,7 +34,7 @@ namespace Jogo___POO
 
             this.getStatus().setManaAtual(mana * 0.15);
 
-            return (inteligencia + agilidade) * (1 + random.Next(0, (int)sorte) / 100);
+            return (inteligencia + agilidade) * (1 + random.Next(0, (int)sorte));
         }
 
         public void curar()

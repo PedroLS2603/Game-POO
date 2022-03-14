@@ -15,7 +15,14 @@ namespace Jogo___POO
 
 
         public Monstro(string nome, int level)
-        {
+        {   
+            this.status.setVidaMax(this.status.getVidaMax() * 1.6);
+            this.status.setVidaAtual(this.status.getVidaMax());
+            this.status.setForca(this.status.getForca() * 1.25);
+            this.status.setAgilidade(this.status.getAgilidade() * 1.1);
+            this.status.setSorte(this.status.getSorte() * 1.05);
+            this.status.setDefesa(this.status.getDefesa() * 2);
+
 
             this.level = level;
             this.nome = nome;
@@ -45,11 +52,12 @@ namespace Jogo___POO
             this.status = status;
         }
 
-        public void RecebeDano(double dano)
+        public void RecebeDano(double ataqueHeroi, double forcaHeroi)
         {
             double vida = this.getStatus().getVidaAtual();
-            double defesa = this.getStatus().getDefesa();
-            this.getStatus().setVidaAtual(vida - this.gerarDefesa());
+            double danoTomado = (ataqueHeroi - (this.gerarDefesa() / 4)) * (20 + forcaHeroi) / 20;
+
+            this.getStatus().setVidaAtual(vida - danoTomado);
         }
 
         private double gerarDefesa()
@@ -58,13 +66,13 @@ namespace Jogo___POO
             double sorte = this.getStatus().getSorte();
             double agilidade = this.getStatus().getAgilidade();
 
-            return (defesa + agilidade) * (1 + random.Next(0, (int)sorte) / 100);
+            return (defesa + agilidade) * (1 + random.Next(0, (int)sorte));
         }
 
 
         public void atacar(Heroi heroi)
         {
-            heroi.RecebeDano(this.gerarAtaque());
+            heroi.RecebeDano(this.gerarAtaque(), this.getStatus().getForca());
         }
 
         private double gerarAtaque()
@@ -73,7 +81,7 @@ namespace Jogo___POO
             double sorte = this.getStatus().getSorte();
             double agilidade = this.getStatus().getAgilidade();
 
-            return (forca + agilidade) * (1 + random.Next(0, (int)sorte) / 100);
+            return (forca + agilidade) * (1 + random.Next(0, (int)sorte) / 20);
         }
     }
 }

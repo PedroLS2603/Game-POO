@@ -81,7 +81,14 @@ namespace Jogo___POO
                 if(turnoHeroi)
                 {
                     heroi.atacar(monstro);
-                    Console.WriteLine("Vida do(a) {0} após ataque - {1}", monstro.getNome(), monstro.getStatus().getVidaAtual());
+                    if(monstro.getStatus().getVidaAtual() >= 0)
+                    {
+                        Console.WriteLine("Vida do(a) {0} após ataque - {1:N0}", monstro.getNome(), monstro.getStatus().getVidaAtual());
+                    }
+                    else
+                    {
+                        Console.WriteLine("Vida do(a) {0} após ataque - 0", monstro.getNome());
+                    }
 
                     turnoHeroi = false;
                     
@@ -89,7 +96,14 @@ namespace Jogo___POO
                 else
                 {
                     monstro.atacar(heroi);
-                    Console.WriteLine("Vida do herói após ataque {0} - {1}", heroi.getNome(), heroi.getStatus().getVidaAtual());
+                    if(heroi.getStatus().getVidaAtual() >= 0) {
+                        Console.WriteLine("Vida do herói após ataque {0} - {1:N0}", heroi.getNome(), heroi.getStatus().getVidaAtual());
+                    }
+                    else
+                    {
+                        Console.WriteLine("Vida do herói após ataque {0} - 0", heroi.getNome());
+                    }
+                    
                     turnoHeroi = true;
                 }
                 Thread.Sleep(1000);
@@ -125,6 +139,22 @@ namespace Jogo___POO
             Console.WriteLine("Defesa: {0:N0}", statusHeroi.getDefesa());
             Console.WriteLine("Vida: {0:N0}", statusHeroi.getVidaMax());
             Console.WriteLine("Mana: {0:N0}", statusHeroi.getManaMax());
+
+
+        }
+
+        public static void printStatusM(Monstro monstro)
+        {
+            Status statusMonstro = monstro.getStatus();
+
+            Console.WriteLine("------------ {0} ------------", monstro.getNome());
+            Console.WriteLine("Força: {0:N0}", statusMonstro.getForca());
+            Console.WriteLine("Agilidade: {0:N0}", statusMonstro.getAgilidade());
+            Console.WriteLine("Inteligência: {0:N0}", statusMonstro.getInteligencia());
+            Console.WriteLine("Sorte: {0:N0}", statusMonstro.getSorte());
+            Console.WriteLine("Defesa: {0:N0}", statusMonstro.getDefesa());
+            Console.WriteLine("Vida: {0:N0}", statusMonstro.getVidaMax());
+            Console.WriteLine("Mana: {0:N0}", statusMonstro.getManaMax());
 
 
         }

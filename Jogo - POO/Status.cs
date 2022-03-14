@@ -22,16 +22,16 @@ namespace Jogo___POO
 
         public Status()
         {
-            this.forca = RpgUtil.gerarStatus(0, 10);
-            this.defesa = RpgUtil.gerarStatus(0, 10);
-            this.agilidade = RpgUtil.gerarStatus(0, 10);
-            this.sorte = RpgUtil.gerarStatus(0, 10);
+            this.forca = RpgUtil.gerarStatus(1, 10);
+            this.defesa = RpgUtil.gerarStatus(1, 10);
+            this.agilidade = RpgUtil.gerarStatus(1, 10);
+            this.sorte = RpgUtil.gerarStatus(1, 10);
 
-            this.inteligencia = RpgUtil.gerarStatus(0, 10);
+            this.inteligencia = RpgUtil.gerarStatus(1, 10);
 
-            this.vidaMax = RpgUtil.gerarStatus(0, 50);
+            this.vidaMax = RpgUtil.gerarStatus(25, 50);
 
-            this.manaMax = RpgUtil.gerarStatus(0, 50);
+            this.manaMax = RpgUtil.gerarStatus(25, 50);
             this.vidaAtual = this.vidaMax;
             this.manaAtual = this.manaMax;
 
@@ -122,6 +122,19 @@ namespace Jogo___POO
         public double getVidaAtual()
         {
             return this.vidaAtual;
+        }
+
+        public void resetStatus()
+        {
+            this.agilidade = 0;
+            this.forca = 0;
+            this.defesa = 0;
+            this.inteligencia = 0;
+            this.manaMax = 0;
+            this.manaAtual = 0;
+            this.vidaAtual = 0;
+            this.vidaMax = 0;
+            this.inteligencia = 0;
         }
     }
 }
