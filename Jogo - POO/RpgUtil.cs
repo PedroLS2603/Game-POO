@@ -97,11 +97,11 @@ namespace Jogo___POO
                 {
                     monstro.atacar(heroi);
                     if(heroi.getStatus().getVidaAtual() >= 0) {
-                        Console.WriteLine("Vida do herói após ataque {0} - {1:N0}", heroi.getNome(), heroi.getStatus().getVidaAtual());
+                        Console.WriteLine("Vida do herói {0} após ataque - {1:N0}", heroi.getNome(), heroi.getStatus().getVidaAtual());
                     }
                     else
                     {
-                        Console.WriteLine("Vida do herói após ataque {0} - 0", heroi.getNome());
+                        Console.WriteLine("Vida do herói {0} após ataque - 0", heroi.getNome());
                     }
                     
                     turnoHeroi = true;

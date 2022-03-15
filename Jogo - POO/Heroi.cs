@@ -93,7 +93,7 @@ namespace Jogo___POO
         {
 
         }
-        public void RecebeDano(double ataqueMonstro, double forcaMonstro)
+        public void RecebeDano(double ataqueMonstro)
         {
             double vida = this.getStatus().getVidaAtual();
             double defesa = this.gerarDefesa();

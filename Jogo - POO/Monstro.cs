@@ -52,7 +52,7 @@ namespace Jogo___POO
             this.status = status;
         }
 
-        public void RecebeDano(double ataqueHeroi, double forcaHeroi)
+        public void RecebeDano(double ataqueHeroi)
         {
             double vida = this.getStatus().getVidaAtual();
             double defesa = this.gerarDefesa();
@@ -77,7 +77,7 @@ namespace Jogo___POO
 
         public void atacar(Heroi heroi)
         {
-            heroi.RecebeDano(this.gerarAtaque(), this.getStatus().getForca());
+            heroi.RecebeDano(this.gerarAtaque());
         }
 
         private double gerarAtaque()

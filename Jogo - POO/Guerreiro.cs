@@ -23,7 +23,7 @@ namespace Jogo___POO
 
         public override void atacar(Monstro monstro)
         {
-            monstro.RecebeDano(this.gerarDano(), this.getStatus().getForca());
+            monstro.RecebeDano(this.gerarDano());
         }
 
 
