@@ -41,13 +41,27 @@ namespace Jogo___POO
 
             if(maoDireita.getClasse() != "" || maoEsquerda.getClasse() != "")
             {
-               return ((forca + agilidade) * (equipMao[0].getPeso() * 0.2)) * (1 + random.Next(0, (int)sorte));
+                double danoBase = (forca + (maoDireita.getPeso() * 0.25)) + (agilidade * 0.2);
+
+                if (random.Next(0, 100) <= (int)sorte)
+                {
+                    danoBase *= 1.5;
+                }
+
+                return danoBase;
 
             }
 
             else
             {
-                return (forca + agilidade) * (1 + random.Next(0, (int)sorte));
+                double danoBase = forca + (agilidade * 0.2);
+
+                if (random.Next(0, 100) <= (int)sorte)
+                {
+                    danoBase *= 1.5;
+                }
+
+                return danoBase;
             }
         }
     }

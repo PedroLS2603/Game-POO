@@ -16,7 +16,7 @@ namespace Jogo___POO
 
         public Monstro(string nome, int level)
         {   
-            this.status.setVidaMax(this.status.getVidaMax() * 1.6);
+            this.status.setVidaMax(this.status.getVidaMax() * 1.1);
             this.status.setVidaAtual(this.status.getVidaMax());
             this.status.setForca(this.status.getForca() * 1.25);
             this.status.setAgilidade(this.status.getAgilidade() * 1.1);
@@ -55,9 +55,14 @@ namespace Jogo___POO
         public void RecebeDano(double ataqueHeroi, double forcaHeroi)
         {
             double vida = this.getStatus().getVidaAtual();
-            double danoTomado = (ataqueHeroi - (this.gerarDefesa() / 4)) * (20 + forcaHeroi) / 20;
+            double defesa = this.gerarDefesa();
+
+            double danoTomado = ataqueHeroi * (1 - (defesa / (defesa + 100)));
 
             this.getStatus().setVidaAtual(vida - danoTomado);
+           
+
+
         }
 
         private double gerarDefesa()

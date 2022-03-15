@@ -33,8 +33,14 @@ namespace Jogo___POO
             double agilidade = this.getStatus().getAgilidade();
 
             this.flechas -= 1;
+            double danoBase = forca + (agilidade * 0.2);
 
-            return (forca + agilidade) * (1 + random.Next(0, (int)sorte));
+            if(random.Next(0, 100) <= (int)sorte)
+            {
+                danoBase *= 1.5; 
+            }
+
+            return danoBase;
         }
 
         public void setFlechas(int flechas)

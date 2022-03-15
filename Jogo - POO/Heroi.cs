@@ -96,7 +96,8 @@ namespace Jogo___POO
         public void RecebeDano(double ataqueMonstro, double forcaMonstro)
         {
             double vida = this.getStatus().getVidaAtual();
-            double danoTomado = (ataqueMonstro - (this.gerarDefesa() / 4)) * (20 + forcaMonstro) / 20;
+            double defesa = this.gerarDefesa();
+            double danoTomado = ataqueMonstro * (1 - (defesa / (defesa + 100)));
             this.getStatus().setVidaAtual(vida - danoTomado);
         }
         public void equipar(Equipamento equip)

@@ -5,3 +5,11 @@ C:\Users\BK_St\Desktop\projetos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.csproj.
 C:\Users\BK_St\Desktop\projetos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.csproj.CoreCompileInputs.cache
 C:\Users\BK_St\Desktop\projetos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.exe
 C:\Users\BK_St\Desktop\projetos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.pdb
+C:\Users\bruno.apescarolli\Source\Repos\Game-POO\Jogo - POO\bin\Debug\Jogo - POO.exe.config
+C:\Users\bruno.apescarolli\Source\Repos\Game-POO\Jogo - POO\bin\Debug\Jogo - POO.exe
+C:\Users\bruno.apescarolli\Source\Repos\Game-POO\Jogo - POO\bin\Debug\Jogo - POO.pdb
+C:\Users\bruno.apescarolli\Source\Repos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.csproj.AssemblyReference.cache
+C:\Users\bruno.apescarolli\Source\Repos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.csproj.SuggestedBindingRedirects.cache
+C:\Users\bruno.apescarolli\Source\Repos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.csproj.CoreCompileInputs.cache
+C:\Users\bruno.apescarolli\Source\Repos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.exe
+C:\Users\bruno.apescarolli\Source\Repos\Game-POO\Jogo - POO\obj\Debug\Jogo - POO.pdb

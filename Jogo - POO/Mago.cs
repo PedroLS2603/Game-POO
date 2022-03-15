@@ -34,7 +34,14 @@ namespace Jogo___POO
 
             this.getStatus().setManaAtual(mana * 0.15);
 
-            return (inteligencia + agilidade) * (1 + random.Next(0, (int)sorte));
+            double danoBase = inteligencia + (agilidade * 0.2);
+
+            if (random.Next(0, 100) <= (int)sorte)
+            {
+                danoBase *= 1.5;
+            }
+
+            return danoBase;
         }
 
         public void curar()
